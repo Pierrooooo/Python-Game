@@ -12,7 +12,6 @@ class Cat:
         self.mooveUnit = 40
 
     def Follow(self, mouse):
-        print(mouse.mousePositionX)
         if mouse.mousePositionX >= self.catPositionX:
             self.catPositionX += self.mooveUnit
         else:

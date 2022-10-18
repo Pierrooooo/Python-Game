@@ -19,6 +19,6 @@ class Board:
         for row in range(20):
             for column in range(20):
                 if (column + row) % 2 == 0:
-                    rectangle = pygame.draw.rect(ecran, COLOR1 , [row * WIDTH, column * WIDTH, HEIGHT, WIDTH])
+                    pygame.draw.rect(ecran, COLOR1 , [row * WIDTH, column * WIDTH, HEIGHT, WIDTH])
                 else:
-                    rectangle = pygame.draw.rect(ecran, COLOR2 , [row * WIDTH, column * WIDTH, HEIGHT, WIDTH])
+                    pygame.draw.rect(ecran, COLOR2 , [row * WIDTH, column * WIDTH, HEIGHT, WIDTH])
