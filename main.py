@@ -11,15 +11,19 @@ pygame.display.set_caption("Ecran Damier")
 
 loop = True
 
+board = Board()
+mouse = Mouse()
+cat = Cat()
+
 while loop:
     ecran.fill((0,0,0))
 
-    board = Board()
-    mouse = Mouse()
-    cat = Cat()
 
     for event in pygame.event.get() :
         if event.type == pygame.KEYDOWN:
+            mouse.Moove(event)
+
+            #cat.Follow(mouse.mousePositionX)
             if event.key == pygame.K_j:
                 loop = False
         if event.type == pygame.QUIT:

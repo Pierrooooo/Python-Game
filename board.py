@@ -8,7 +8,13 @@ COLOR2 = (255, 255, 255)
 class Board:
     def __init__(self):
         #print("The board of the game is getting create")
-        self.case = [[0]*20]*20
+        self.case = []
+        for r in range(20):
+            row = []
+            for l in range(20):
+                row.append(0)
+                self.case.append(row)
+
     def Draw(self,ecran):
         for row in range(20):
             for column in range(20):

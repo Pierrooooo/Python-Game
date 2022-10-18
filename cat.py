@@ -1,12 +1,17 @@
 import pygame
+import mouse
 
-catColor = (255, 0, 0)
-catPosition = (780, 780)
-catSize = 15
 
 class Cat:
-    def __int__(self):
+    def __init__(self):
         self.case = 30
+        self.catPositionX = 780
+        self.catPositionY = 780
+        self.catColor = (255, 0, 0)
+        self.catSize = 15
+
+    #def Follow(self):
+      #  print(mouse.mousePositionX)
 
     def Draw(self, ecran):
-        cat = pygame.draw.circle(ecran,catColor , catPosition, catSize)
+        pygame.draw.circle(ecran, self.catColor , (self.catPositionX, self.catPositionY), self.catSize)
