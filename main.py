@@ -22,8 +22,8 @@ while loop:
     for event in pygame.event.get() :
         if event.type == pygame.KEYDOWN:
             mouse.Moove(event)
+            cat.Follow(mouse)
 
-            #cat.Follow(mouse.mousePositionX)
             if event.key == pygame.K_j:
                 loop = False
         if event.type == pygame.QUIT:
