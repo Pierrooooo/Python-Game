@@ -29,20 +29,23 @@ while loop:
 
             counter +=1
 
-
             mouse.Moove(event, counter)
             cat.Follow(mouse)
+
+            if mouse.mousePositionX == cat.catPositionX and mouse.mousePositionY == cat.catPositionY:
+                loop = False
+                print(f'You loosed at the round N° {counter - 1}/{difficulties.roundToWin}.')
 
             if difficultyChoosen == '4' or difficultyChoosen == '3':
                 cat2.Follow(mouse)
 
-            if cat.catPositionX == cat2.catPositionX and cat.catPositionY == cat2.catPositionY:
-                loop = False
-                print(f'Cats are dump you win at the round N° {counter - 1} on the {difficulties.lvlOfDif} difficulty mode. ')
+                if mouse.mousePositionX == cat2.catPositionX and mouse.mousePositionY == cat2.catPositionY:
+                    loop = False
+                    print(f'You loosed at the round N° {counter - 1}/{difficulties.roundToWin}.')
 
-            if mouse.mousePositionX == cat.catPositionX and mouse.mousePositionY == cat.catPositionY or mouse.mousePositionX == cat2.catPositionX and mouse.mousePositionY == cat2.catPositionY:
-                loop = False
-                print(f'You loosed at the round N° {counter - 1}/{difficulties.roundToWin}.')
+                if cat.catPositionX == cat2.catPositionX and cat.catPositionY == cat2.catPositionY:
+                    loop = False
+                    print(f'Cats are dump you win at the round N° {counter - 1} on the {difficulties.lvlOfDif} difficulty mode. ')
 
             if counter == difficulties.roundToWin:
                 loop = False
