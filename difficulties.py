@@ -13,10 +13,10 @@ class Difficulties:
             self.roundToWin = 20
         elif difficultyChoosen == '2':
             self.lvlOfDif = "Medium"
-            self.roundToWin = 30
+            self.roundToWin = 50
         elif difficultyChoosen == '3':
             self.lvlOfDif = "Hard"
-            self.roundToWin = 50
+            self.roundToWin = 100
         elif difficultyChoosen == '4':
             self.lvlOfDif = "Hard Core Extrem"
             self.roundToWin = 9999

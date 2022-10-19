@@ -2,6 +2,7 @@ import pygame
 from board import Board
 from mouse import Mouse
 from cat import Cat
+from cat2 import Cat2
 from difficulties import Difficulties
 
 module_charge = pygame.init()
@@ -15,6 +16,7 @@ loop = True
 board = Board()
 mouse = Mouse()
 cat = Cat()
+cat2 = Cat2()
 difficulties = Difficulties()
 difficulties.SelectMode(difficultyChoosen)
 counter = 0
@@ -31,7 +33,14 @@ while loop:
             mouse.Moove(event, counter)
             cat.Follow(mouse)
 
-            if mouse.mousePositionX == cat.catPositionX and mouse.mousePositionY == cat.catPositionY:
+            if difficultyChoosen == '4' or difficultyChoosen == '3':
+                cat2.Follow(mouse)
+
+            if cat.catPositionX == cat2.catPositionX and cat.catPositionY == cat2.catPositionY:
+                loop = False
+                print(f'Cats are dump you win at the round N° {counter - 1} on the {difficulties.lvlOfDif} difficulty mode. ')
+
+            if mouse.mousePositionX == cat.catPositionX and mouse.mousePositionY == cat.catPositionY or mouse.mousePositionX == cat2.catPositionX and mouse.mousePositionY == cat2.catPositionY:
                 loop = False
                 print(f'You loosed at the round N° {counter - 1}/{difficulties.roundToWin}.')
 
@@ -47,4 +56,6 @@ while loop:
     board.Draw(ecran)
     mouse.Draw(ecran)
     cat.Draw(ecran)
+    if difficultyChoosen == '4' or difficultyChoosen == '3':
+        cat2.Draw(ecran)
     pygame.display.flip()
