@@ -17,7 +17,6 @@ mouse = Mouse()
 cat = Cat()
 difficulties = Difficulties()
 difficulties.SelectMode(difficultyChoosen)
-
 counter = 0
 
 while loop:
@@ -26,23 +25,19 @@ while loop:
     for event in pygame.event.get() :
         if event.type == pygame.KEYDOWN:
 
-            counter += 1
+            counter +=1
 
-            if counter % 3 != 0:
-                mouse.mooveUnit = 40
-            else:
-                mouse.mooveUnit = 80
 
-            mouse.Moove(event)
+            mouse.Moove(event, counter)
             cat.Follow(mouse)
 
             if mouse.mousePositionX == cat.catPositionX and mouse.mousePositionY == cat.catPositionY:
                 loop = False
-                print(f'You loosed at the round N°{counter - 1}.')
+                print(f'You loosed at the round N° {counter - 1}/{difficulties.roundToWin}.')
 
             if counter == difficulties.roundToWin:
                 loop = False
-                print(f'You won on the {difficulties.lvlOfDif} difficulty mode')
+                print(f'You won on the {difficulties.lvlOfDif} difficulty mode.')
 
             if event.key == pygame.K_j:
                 loop = False

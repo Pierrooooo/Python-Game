@@ -1,10 +1,7 @@
 1. Make the Board  --> Done
 2. Make the Mouse & the Cat  --> Done
 3. Show the Mouse & the Cat on the screen --> Done
-4. Make the Mouse mooving
-5. Making the moovement of the mouse limited (distance)
-6. create the algo to make the Cat following the mouse until it can jump into the mouse
-7. making diffenrent  difficulties game mode (easey = 20mooves .... hardcore = no limits just go as far as u can)
-
-If i got time :
-Make the mooves needing a validation
+4. Make the Mouse mooving --> Done
+5. Making the moovement of the mouse limited (distance) --> Done
+6. create the algo to make the Cat following the mouse until it can jump into the mouse -> Done
+7. making diffenrent  difficulties game mode (easey = 20mooves .... hardcore = no limits just go as far as u can) --> Done
