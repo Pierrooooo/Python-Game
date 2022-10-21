@@ -10,6 +10,9 @@ class Cat:
         self.catColor = (255, 0, 0)
         self.catSize = 15
         self.mooveUnit = 40
+        self.height = 35
+        self.width = 35
+        self.img = pygame.image.load('tom.png')
 
     def Follow(self, mouse):
 
@@ -34,4 +37,5 @@ class Cat:
             self.catPositionY = self.catPositionY
 
     def Draw(self, ecran):
-        pygame.draw.circle(ecran, self.catColor , (self.catPositionX, self.catPositionY), self.catSize)
+        ecran.blit(self.img.convert_alpha(), ((self.catPositionX - self.width / 2 , self.catPositionY - self.height / 2)))
+        #pygame.draw.circle(ecran, self.catColor , (self.catPositionX, self.catPositionY), self.catSize)

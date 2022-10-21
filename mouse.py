@@ -7,8 +7,10 @@ class Mouse:
         self.mousePositionX = 420
         self.mousePositionY = 420
         self.mouseColor = (47, 214, 120)
-        self.mouseSize = 8
         self.mooveUnit = 40
+        self.height = 35
+        self.width = 35
+        self.img = pygame.image.load('jerry.png')
 
     def Moove(self, event, counter):
 
@@ -72,4 +74,5 @@ class Mouse:
 
 
     def Draw(self, ecran):
-        pygame.draw.circle(ecran, self.mouseColor, (self.mousePositionX, self.mousePositionY), self.mouseSize)
+        ecran.blit(self.img.convert_alpha(), ((self.mousePositionX - self.width / 2 , self.mousePositionY - self.height / 2)))
+        #pygame.draw.circle(ecran, self.mouseColor, (self.mousePositionX, self.mousePositionY), self.mouseSize)

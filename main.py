@@ -45,7 +45,7 @@ while loop:
 
                 if cat.catPositionX == cat2.catPositionX and cat.catPositionY == cat2.catPositionY:
                     loop = False
-                    print(f'Cats are dump you win at the round N° {counter - 1} on the {difficulties.lvlOfDif} difficulty mode. ')
+                    print(f'Cats are dump, they just ran into each other, you win at the round N° {counter - 1} on the {difficulties.lvlOfDif} difficulty mode. ')
 
             if counter == difficulties.roundToWin:
                 loop = False
