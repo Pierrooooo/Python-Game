@@ -7,7 +7,6 @@ class Cat:
         self.case = 30
         self.catPositionX = 780
         self.catPositionY = 780
-        self.catColor = (255, 0, 0)
         self.catSize = 15
         self.mooveUnit = 40
         self.height = 35
